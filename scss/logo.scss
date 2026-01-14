@@ -1,0 +1,14 @@
+.logo{
+  width: 100%;
+
+  &_header{
+    max-width: 220px;
+
+    position: relative;
+    z-index: 2;
+
+    @media(max-width:1200px){
+      max-width: 144px;
+    }
+  }
+}
