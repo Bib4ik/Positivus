@@ -1,0 +1,72 @@
+.link{
+  $link: &; //ссылка на селектор .link
+  $icon: #{$link}__icon;
+  $decor: #{$link}__decor;
+
+  display: flex;
+  align-items: center;
+  font-size: $size-btn;
+  color: $color-black;
+  text-decoration: none;
+
+  column-gap: 1.5rem;
+
+  &__decor{
+    background-color: $color-dark;
+
+    &_green{
+      background-color: $color-green;
+    }
+
+    &_white{
+      background-color: $color-white;
+    }
+  }
+
+  &__icon{
+    width: 2rem;
+    height: 2rem;
+    fill: $color-dark;
+  }
+
+  &_round{
+    #{$decor} {
+      width: 4.1rem;
+      height: 4.1rem;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    #{$icon} {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &_color{
+    &_white{
+      color: $color-white;
+    }
+
+    &_white{
+      color: $color-green;
+    }
+  }
+
+  &_icon{
+    &_white{
+      #{$icon} {
+        fill: $color-white;
+      }
+    }
+
+    &_green{
+      #{$icon} {
+        fill: $color-green;
+      }
+    }
+  }
+}

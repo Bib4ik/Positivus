@@ -1,0 +1,26 @@
+.heading{
+  span{
+    display: inline-block;
+    border-radius: 0.7rem;
+    padding: 0 0.7rem;
+  }
+
+  &_bg{
+    &_white {
+      span{
+        background-color: $color-white;
+      }
+    }
+    &_green {
+      span{
+        background-color: $color-green;
+      }
+    }
+    &_black {
+      span{
+        background-color: $color-black;
+        color: $color-white;
+      }
+    }
+  }
+}
