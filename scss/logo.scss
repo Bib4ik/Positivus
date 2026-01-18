@@ -1,14 +1,18 @@
 .logo{
   width: 100%;
+  max-width: 22rem;
+
+  @media(max-width:$media-m){
+    max-width: 14.4rem;
+  }
+
 
   &_header{
-    max-width: 220px;
-
     position: relative;
     z-index: 2;
+  }
 
-    @media(max-width:1200px){
-      max-width: 144px;
-    }
+  &_footer{
+    max-width: 18rem;
   }
 }

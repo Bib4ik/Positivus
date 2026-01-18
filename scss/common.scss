@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html{
+  font-size: 10px;
+  font-family: $font-family;
+}
+
 body{
   display: flex;
   justify-content: center;
@@ -15,5 +20,5 @@ body{
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  max-width: 1240px;
+  max-width: 124rem;
 }
