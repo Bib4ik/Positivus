@@ -3,6 +3,14 @@
     border-radius: 4.5rem;
     border: 1px solid $color-dark;
     box-shadow: 0 5px 0 0 $color-dark;
+    @media(hover: hover){
+      transition: all 0.3s ease-out;
+
+      &:hover,
+      &:active{
+        box-shadow: 0 1px 0 0 $color-dark;
+      }
+    }
 
     padding: 5rem;
 

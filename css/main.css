@@ -112,7 +112,7 @@ p {
   align-items: center;
   width: 100%;
 }
-@media (max-width: 1300px) {
+@media all and (max-width: 1300px) {
   .header {
     padding: 0 2rem;
   }
@@ -250,7 +250,7 @@ p {
   position: relative;
   z-index: 2;
 }
-@media (max-width: 1300px) {
+@media all and (max-width: 1300px) {
   .menu {
     display: block;
   }
@@ -458,6 +458,16 @@ p {
   border-radius: 4.5rem;
   border: 1px solid #191A23;
   box-shadow: 0 5px 0 0 #191A23;
+}
+@media (hover: hover) {
+  .card_service {
+    transition: all 0.3s ease-out;
+  }
+  .card_service:hover, .card_service:active {
+    box-shadow: 0 1px 0 0 #191A23;
+  }
+}
+.card_service {
   padding: 5rem;
   width: 100%;
   max-width: 60rem;
