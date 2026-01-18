@@ -31,6 +31,12 @@ body {
   flex-direction: column;
   width: 100%;
   max-width: 124rem;
+  padding-top: 6rem;
+}
+@media all and (max-width: 1200px) {
+  .page {
+    padding-top: 3rem;
+  }
 }
 
 h1, h2, h3, h4, h5 {
@@ -77,11 +83,28 @@ h4 {
 
 p {
   font-size: 1.8rem;
+  margin: 0;
 }
 @media all and (max-width: 500px) {
   p {
     font-size: 1.6rem;
   }
+}
+
+.partners {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem 5rem;
+  width: 100%;
+}
+@media all and (max-width: 1200px) {
+  .partners {
+    column-gap: 3rem;
+  }
+}
+.partners img {
+  filter: grayscale(100);
 }
 
 .header {
@@ -344,6 +367,89 @@ p {
 .heading_bg_black span {
   background-color: #000;
   color: #fff;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 7rem 0;
+}
+@media all and (max-width: 1200px) {
+  .section {
+    padding: 0 2rem;
+    margin: 3rem 0;
+  }
+}
+.section_first {
+  position: relative;
+}
+.section_first .section__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 53rem;
+  margin-bottom: 10.5rem;
+  row-gap: 3.5rem;
+}
+@media all and (max-width: 1200px) {
+  .section_first .section__container {
+    margin: 0 auto 6rem;
+    max-width: 100rem;
+  }
+}
+@media all and (max-width: 500px) {
+  .section_first .section__container {
+    row-gap: 1rem;
+  }
+}
+@media all and (max-width: 500px) {
+  .section_first .section__container p {
+    margin-bottom: 3rem;
+  }
+}
+.section__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media all and (max-width: 1200px) {
+  .section__img {
+    position: relative;
+    width: 100%;
+    max-width: 60rem;
+  }
+}
+@media all and (max-width: 500px) {
+  .section__img {
+    margin: 1rem;
+  }
+}
+.section__header {
+  display: flex;
+  column-gap: 4rem;
+  max-width: 80rem;
+  margin-bottom: 8rem;
+}
+@media all and (max-width: 1200px) {
+  .section__header {
+    flex-direction: column;
+    row-gap: 3rem;
+    margin: 0 auto 4rem;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.card_service {
+  border-radius: 4.5rem;
+  border: 1px solid #191A23;
+  box-shadow: 0 5px 0 0 #191A23;
+  padding: 5rem;
+  width: 100%;
+  max-width: 60rem;
+  min-height: 31rem;
+  background-color: #F3F3F3;
+  display: grid;
 }
 
 /*# sourceMappingURL=main.css.map */

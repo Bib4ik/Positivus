@@ -1,0 +1,17 @@
+.card{
+  &_service{
+    border-radius: 4.5rem;
+    border: 1px solid $color-dark;
+    box-shadow: 0 5px 0 0 $color-dark;
+
+    padding: 5rem;
+
+    width: 100%;
+    max-width: 60rem;
+    min-height: 31rem;
+
+    background-color: $color-grey;
+
+    display: grid;
+  }
+}

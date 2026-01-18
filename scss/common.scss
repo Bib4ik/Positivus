@@ -21,6 +21,11 @@ body{
   flex-direction: column;
   width: 100%;
   max-width: 124rem;
+  padding-top: 6rem;
+
+  @media all and (max-width: $media-m) {
+    padding-top: 3rem;
+  }
 }
 
 h1,h2,h3,h4,h5{
@@ -63,8 +68,25 @@ h4{
 
 p{
   font-size: $size-p;
+  margin: 0;
 
   @media all and (max-width: $media-s) {
     font-size: $size-p-mob;
+  }
+}
+
+.partners{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem 5rem;
+  width: 100%;
+
+  @media all and (max-width: $media-m) {
+    column-gap: 3rem;
+  }
+
+  img{
+    filter: grayscale(100);
   }
 }
