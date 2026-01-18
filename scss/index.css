@@ -1,18 +1,234 @@
-/* Error: Undefined variable.
- *   ,
- * 7 |   font-family: $font-family;
- *   |                ^^^^^^^^^^^^
- *   '
- *   common.scss 7:16  @use
- *   index.scss 10:1   root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 7 \2502    font-family: $font-family;\d\a   \2502                 ^^^^^^^^^^^^\a   \2575 \a   common.scss 7:16  @use\a   index.scss 10:1   root stylesheet";
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/fonts/SpaceGrotesk-Regular.ttf");
+  font-weight: 400;
 }
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/fonts/SpaceGrotesk-Medium.ttf");
+  font-weight: 500;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Space Grotesk";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 124rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  .header {
+    padding: 0 2rem;
+  }
+}
+
+.logo {
+  width: 100%;
+  max-width: 22rem;
+}
+@media (max-width: 1200px) {
+  .logo {
+    max-width: 14.4rem;
+  }
+}
+.logo_header {
+  position: relative;
+  z-index: 2;
+}
+.logo_footer {
+  max-width: 18rem;
+}
+
+.nav {
+  display: flex;
+  font-size: 2rem;
+  gap: 4rem;
+  align-items: center;
+  margin-left: auto;
+}
+@media (max-width: 1200px) {
+  .nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+    background-color: white;
+    row-gap: 4rem;
+    padding: 10rem 6rem 4rem;
+    height: 100vh;
+    width: 100%;
+    max-width: 30rem;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+  }
+}
+@media (max-width: 500px) {
+  .nav {
+    max-width: 100%;
+  }
+}
+.nav_search {
+  transform: translateX(0);
+  transition: all 0.3s ease-in;
+}
+.nav__link {
+  text-decoration: none;
+  color: black;
+  flex-shrink: 0;
+}
+
+.btn {
+  border-radius: 1.4rem;
+  padding: 2rem 3.5rem;
+  font-size: 2rem;
+  color: #191A23;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+}
+@media (max-width: 1200px) {
+  .btn {
+    width: 100%;
+  }
+}
+@media (hover: hover) {
+  .btn {
+    transition: all 0.3s ease-out;
+  }
+  .btn:hover, .btn:active {
+    transition: all 0.3s ease-in;
+  }
+}
+.btn_primary {
+  color: #fff;
+  background-color: #191A23;
+}
+@media (hover: hover) {
+  .btn_primary {
+    transition: all 0.3s ease-out;
+  }
+  .btn_primary:hover, .btn_primary:active {
+    color: #000;
+    background-color: #B9FF66;
+  }
+}
+.btn_secondary {
+  background-color: #B9FF66;
+}
+@media (hover: hover) {
+  .btn_secondary {
+    transition: all 0.3s ease-out;
+  }
+  .btn_secondary:hover, .btn_secondary:active {
+    color: #fff;
+    background-color: #191A23;
+  }
+}
+.btn_outline {
+  border: 1px solid #191A23;
+}
+@media (hover: hover) {
+  .btn_outline {
+    transition: all 0.3s ease-out;
+  }
+  .btn_outline:hover, .btn_outline:active {
+    color: #fff;
+    background-color: #191A23;
+  }
+}
+.btn_header {
+  margin-left: 4rem;
+}
+@media (max-width: 1200px) {
+  .btn_header {
+    display: none;
+  }
+}
+
+.menu {
+  width: 2.4rem;
+  display: none;
+  margin-left: auto;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 1200px) {
+  .menu {
+    display: block;
+  }
+}
+
+.icon_plus, .icon_minus {
+  width: 5.8rem;
+  height: 5.8rem;
+  border-radius: 50%;
+  border: 1px solid #191A23;
+  background-color: #F3F3F3;
+  position: relative;
+}
+@media all and (max-width: 1200px) {
+  .icon_plus, .icon_minus {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.icon_plus::before, .icon_minus::before {
+  content: "";
+  display: block;
+  width: 1.8rem;
+  height: 0.6rem;
+  background-color: #191A23;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media all and (max-width: 1200px) {
+  .icon_plus::before, .icon_minus::before {
+    width: 1.3rem;
+    height: 0.3rem;
+  }
+}
+.icon_plus::after {
+  content: "";
+  display: block;
+  width: 0.6rem;
+  height: 1.8rem;
+  background-color: #191A23;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media all and (max-width: 1200px) {
+  .icon_plus::after {
+    width: 1.3rem;
+    height: 0.3rem;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
