@@ -17,6 +17,7 @@
     #{$this}__container{
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       max-width: 53rem;
       margin-bottom: 10.5rem;
       row-gap: 3.5rem;
@@ -34,6 +35,21 @@
         @media all and (max-width: $media-s) {
           margin-bottom: 3rem;
         }
+      }
+    }
+  }
+
+  &_second{
+    #{$this}__cards{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 12rem;
+
+      @media all and (max-width: $media-m) {
+        margin-bottom: 7rem;
+        grid-template-columns: repeat(auto-fit, minmax(39rem, 1fr));
+        gap: 3rem;
       }
     }
   }
