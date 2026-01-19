@@ -85,4 +85,11 @@
       text-align: center;
     }
   }
+
+  &__header-info{
+    display: flex;
+    column-gap: 4rem;
+    max-width: 82rem;
+    margin-bottom: 8rem;
+  }
 }

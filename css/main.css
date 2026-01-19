@@ -357,6 +357,7 @@ p {
   display: inline-block;
   border-radius: 0.7rem;
   padding: 0 0.7rem;
+  white-space: nowrap;
 }
 .heading_bg_white span {
   background-color: #fff;
@@ -453,21 +454,17 @@ p {
     text-align: center;
   }
 }
+.section__header-info {
+  display: flex;
+  column-gap: 4rem;
+  max-width: 82rem;
+  margin-bottom: 8rem;
+}
 
 .card_service {
   border-radius: 4.5rem;
   border: 1px solid #191A23;
   box-shadow: 0 5px 0 0 #191A23;
-}
-@media (hover: hover) {
-  .card_service {
-    transition: all 0.3s ease-out;
-  }
-  .card_service:hover, .card_service:active {
-    box-shadow: 0 1px 0 0 #191A23;
-  }
-}
-.card_service {
   padding: 5rem;
   width: 100%;
   max-width: 60rem;
@@ -477,6 +474,14 @@ p {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "title img" "link img";
+}
+@media (hover: hover) {
+  .card_service {
+    transition: all 0.3s ease-out;
+  }
+  .card_service:hover, .card_service:active {
+    box-shadow: 0 1px 0 0 #191A23;
+  }
 }
 @media all and (max-width: 1300px) {
   .card_service {
@@ -541,6 +546,14 @@ p {
   .card_proposal img {
     display: none;
   }
+}
+
+.info {
+  background-color: #191A23;
+}
+
+.info_card {
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */
