@@ -51,7 +51,7 @@
       color: $color-white;
     }
 
-    &_white{
+    &_green{
       color: $color-green;
     }
   }
@@ -68,5 +68,13 @@
         fill: $color-green;
       }
     }
+  }
+
+    &__text{
+      padding-top: 10px;
+    }
+
+  &__arrow{
+    margin-right: 50px;
   }
 }

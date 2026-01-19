@@ -1,7 +1,48 @@
 .info{
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  width: 100%;
+  max-width: 125rem;
+  min-height: 31rem;
   background-color: $color-dark;
+
+  &_card{
+    color: $color-white;
+    padding: 70px 0;
+  }
+
+  &__text{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-right: 1px solid #ffffff;
+    padding: 0 64px;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    .link{
+
+
+      &__decor{
+        width: 0;
+        height: 0;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &__link{
+    display: flex;
+  }
+
+  &_link-text{
+    color: $color-green;
+  }
+
+
 }
 
-.info_card{
-  color: $color-white;
-}
+

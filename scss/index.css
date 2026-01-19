@@ -343,7 +343,7 @@ p {
 .link_color_white {
   color: #fff;
 }
-.link_color_white {
+.link_color_green {
   color: #B9FF66;
 }
 .link_icon_white .link__icon {
@@ -351,6 +351,12 @@ p {
 }
 .link_icon_green .link__icon {
   fill: #B9FF66;
+}
+.link__text {
+  padding-top: 10px;
+}
+.link__arrow {
+  margin-right: 50px;
 }
 
 .heading span {
@@ -460,6 +466,15 @@ p {
   max-width: 82rem;
   margin-bottom: 8rem;
 }
+@media all and (max-width: 1300px) {
+  .section {
+    flex-direction: column;
+    row-gap: 3rem;
+    margin: 0 auto 4rem;
+    justify-content: center;
+    text-align: center;
+  }
+}
 
 .card_service {
   border-radius: 4.5rem;
@@ -549,11 +564,38 @@ p {
 }
 
 .info {
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  width: 100%;
+  max-width: 125rem;
+  min-height: 31rem;
   background-color: #191A23;
 }
-
 .info_card {
   color: #fff;
+  padding: 70px 0;
+}
+.info__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-right: 1px solid #ffffff;
+  padding: 0 64px;
+}
+.info__text:last-child {
+  border-right: none;
+}
+.info__text .link__decor {
+  width: 0;
+  height: 0;
+  margin-left: 10px;
+}
+.info__link {
+  display: flex;
+}
+.info_link-text {
+  color: #B9FF66;
 }
 
 /*# sourceMappingURL=index.css.map */
