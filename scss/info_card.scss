@@ -42,7 +42,52 @@
     color: $color-green;
   }
 
+  &__list{
 
+  }
+
+  &__item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    //gap: 25px;
+    background-color: $color-green;
+    border-radius: 4.5rem;
+    border: 1px solid $color-dark;
+    box-shadow: 0 5px 0 0 $color-dark;
+    width: 100%;
+    padding: 5rem;
+  }
+
+  &__item-h1{
+    margin: 0;
+    font-size: 60px;
+  }
+
+  &__item-h2{
+    margin: 0;
+    margin-left: 25px;
+    font-size: 30px;
+  }
+
+  &__btn{
+    margin-left: auto;
+    border: none;
+    background-color: $color-green;
+  }
+
+  &__line {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #000;
+    margin: 15px 0;
+  }
+
+  &__item p{
+    width: 100%;
+    margin-top: 15px;
+  }
 }
 
 

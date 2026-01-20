@@ -91,14 +91,32 @@
     column-gap: 4rem;
     max-width: 82rem;
     margin-bottom: 8rem;
+
+    @media all and (max-width: $media-m) {
+      flex-direction: column;
+      row-gap: 3rem;
+      margin: 0 auto 4rem;
+
+      justify-content: center;
+      text-align: center;
+    }
   }
 
-  @media all and (max-width: $media-m) {
-    flex-direction: column;
-    row-gap: 3rem;
-    margin: 0 auto 4rem;
+  &__header-list{
+    display: flex;
+    column-gap: 4rem;
+    max-width: 75rem;
+    margin-bottom: 8rem;
+    padding-top: 14rem;
 
-    justify-content: center;
-    text-align: center;
+    @media all and (max-width: $media-m) {
+      flex-direction: column;
+      row-gap: 3rem;
+      margin: 0 auto 4rem;
+
+      justify-content: center;
+      text-align: center;
+    }
   }
+
 }
