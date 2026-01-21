@@ -125,16 +125,12 @@
   &_btn{
     display: flex;
     flex-direction: row-reverse;
+    margin-top: 40px;
   }
 
-  &__btn-end{
-    border-radius: 1.5rem;
-    border: none;
-    font-size: 20px;
-    width: 269px;
-    height: 68px;
+  &_btn-end{
+    display: flex;
+    flex-direction: row-reverse;
     margin-top: 40px;
-    color: $color-white;
-    background-color: $color-dark;
   }
 }

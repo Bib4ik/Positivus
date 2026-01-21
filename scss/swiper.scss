@@ -1,0 +1,53 @@
+.swiper{
+
+  &-slide__content{
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    border-radius: 4.5rem;
+    border: none;
+    width: 124rem;
+    height: 62.5rem;
+    padding-top: 84px;
+    padding-right: 324px;
+    padding-left: 310px;
+    background-color: $color-dark;
+    color: $color-white;
+  }
+
+  &-slide__text{
+    align-items: center;
+    font-size: 18px;
+    border-radius: 4rem;
+    border: 1px solid $color-green;
+    padding: 52px;
+    width: 606px;
+    height: 235px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;     // Смещаем вниз, чтобы половина квадрата вылезла за край
+      left: 50px;        // Положение хвостика слева
+      width: 24px;       // Размер квадрата
+      height: 24px;
+      background-color: #191A23;     // Цвет фона должен совпадать с фоном блока
+      border-right: 1px solid #B9FF66; // Обводка только для двух сторон
+      border-bottom: 1px solid #B9FF66;
+      transform: rotate(45deg);      // Поворачиваем, чтобы получился ромб
+    }
+  }
+
+  &-slide__title{
+    margin-top: 40px;
+    margin-left: 60px;
+    font-size: 20px;
+    color: $color-green;
+  }
+
+  &-slide__subtitle{
+    font-size: 18px;
+    margin-left: 60px;
+  }
+}
