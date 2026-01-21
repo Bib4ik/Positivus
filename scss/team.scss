@@ -2,8 +2,8 @@
   &__cards{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap:4rem;
+    gap: 4rem;
+    align-items: start;
   }
 
   &__member{
@@ -11,7 +11,11 @@
     border: 1px solid $color-dark;
     box-shadow: 0 5px 0 0 $color-dark;
     padding: 40px;
-    margin-bottom: 40px;
+    width: 387px;
+    height: 331px;
+    width: calc((100% - 8rem) / 3); // ✅ 3 карточки в ряд с учётом gap
+    // Альтернатива: flex: 0 0 calc((100% - 8rem) / 3);
+
     @media(hover: hover){
       transition: all 0.3s ease-out;
 
@@ -20,37 +24,117 @@
         box-shadow: 0 1px 0 0 $color-dark;
       }
     }
+  }
 
-    max-width: 387px;
-    max-height: 331px;
+  &__member2{
+    border-radius: 4.5rem;
+    border: 1px solid $color-dark;
+    box-shadow: 0 5px 0 0 $color-dark;
+    padding: 40px;
+    width: 387px;
+    height: 354px;
+    width: calc((100% - 8rem) / 3); // ✅ 3 карточки в ряд с учётом gap
+    // Альтернатива: flex: 0 0 calc((100% - 8rem) / 3);
+
+    @media(hover: hover){
+      transition: all 0.3s ease-out;
+
+      &:hover,
+      &:active{
+        box-shadow: 0 1px 0 0 $color-dark;
+      }
+    }
   }
 
   &__header{
-    position: relative;
+    display: flex;
+    align-items: center; // ✅ вертикальное центрирование
+    gap: 20px; // ✅ расстояние между элементами
+    margin-bottom: 28px;
+    position: relative; // ✅ для абсолютного позиционирования кнопки
+  }
+
+  &__header-photo{
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0; // ✅ не сжимается
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__header-name{
+    flex: 1; // ✅ занимает всё оставшееся место
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 48px;
   }
 
   &__item-h2{
+    margin: 0;
     font-size: 20px;
     font-weight: 550;
+    line-height: 1.2;
   }
 
   &__item-h3{
+    white-space: nowrap;
+    margin: 0;
     font-size: 18px;
     font-weight: normal;
+    line-height: 1.2;
   }
 
   &__btn{
-    position: absolute;
-    top: 0;
-    right: 0;
-    //margin-left: auto;
+    position: absolute; // ✅ абсолютное позиционирование
+    top: -10px;
+    right: -5px;
     border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    width: 34px;
+    height: 34px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
   }
 
   &__line{
     width: 100%;
-    height: 3px;
+    height: 1px;
     background-color: $color-black;
-    margin: 30px 0;
+    border: none;
+    margin: 0 0 20px 0;
+  }
+
+  &__member p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  &_btn{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &__btn-end{
+    border-radius: 1.5rem;
+    border: none;
+    font-size: 20px;
+    width: 269px;
+    height: 68px;
+    margin-top: 40px;
+    color: $color-white;
+    background-color: $color-dark;
   }
 }

@@ -84,6 +84,8 @@
     margin-left: auto;
     border: none;
     background-color: $color-green;
+    cursor: pointer;
+    transition: transform 0.3s ease;
   }
 
   &__btn-white{
@@ -104,6 +106,41 @@
     margin-right: 15px;
     margin-top: 15px;
   }
+
+
+  .info__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;  /* показывает что можно кликнуть */
+  }
+
+  .info__item-h1 {
+    margin: 0;
+    margin-right: 15px;
+  }
+
+  .info__item-h2 {
+    margin: 0;
+    flex: 1;  /* занимает оставшееся пространство */
+  }
+
+  &__content{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  p {
+    margin-top: 0; // ✅ чтобы не было отступа сверху
+  }
+
+
+  &__item.active &__content {
+    max-height: 1000px; /* больше чем может быть контент */
+  }
 }
+
 
 
