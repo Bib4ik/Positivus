@@ -151,4 +151,20 @@
     }
   }
 
+  &__header-form{
+    display: flex;
+    column-gap: 4rem;
+    max-width: 60rem;
+    margin-bottom: 8rem;
+
+    @media all and (max-width: $media-m) {
+      flex-direction: column;
+      row-gap: 3rem;
+      margin: 0 auto 4rem;
+
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
 }

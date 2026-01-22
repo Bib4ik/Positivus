@@ -77,7 +77,6 @@
     position: relative; // ✅ было absolute
     display: flex;
     justify-content: center; // ✅ центрируем блок управления
-    margin-top: 30px;
     z-index: 10;
   }
 
