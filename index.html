@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -392,9 +393,9 @@
             </p>
         </div>
 
-        <div class="top__swiper swiper">
+        <div class="swiper__slider swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slides">
+
                     <div class="swiper-slide">
                         <div class="swiper_container">
                             <div class="swiper-slide__content">
@@ -405,20 +406,36 @@
                             </div>
                         </div>
                     </div>
+
+                <div class="swiper-slide">
+                    <div class="swiper_container">
+                        <div class="swiper-slide__content">
+                            <p class="swiper-slide__text">"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."
+                            </p>
+                            <h1 class="swiper-slide__title">John Smith</h1>
+                            <p class="swiper-slide__subtitle">Marketing Director at XYZ Corp</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class=" swiper_container swiper_container-arrow">
-                <div class="swiper-button-prev">
-                    <img src="images/arrow-left.svg" alt="">
-                </div>
-                <div class="swiper-button-next">
-                    <img src="images/arrow-right.svg" alt="">
+                <div class="swiper-controls">
+                    <div class="swiper-button-prev">
+                        <img src="/assets/icons/arrow-left.png" alt="">
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-next">
+                        <img src="/assets/icons/arrow-right.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
