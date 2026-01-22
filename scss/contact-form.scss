@@ -1,0 +1,142 @@
+.contact__wrapper{
+  display: flex;
+}
+
+.contact-form{
+  background-color: #F3F3F3;
+  border-radius: 45px;
+  padding: 60px;
+  padding-left: 100px;
+  width: 100%;
+  max-width: 700px;
+
+  &__tabs{
+    display: flex;
+    gap: 35px;
+    margin-bottom: 40px;
+  }
+
+  &__tab {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    input[type="radio"] {
+      appearance: none;
+      width: 28px;
+      height: 28px;
+      border: 1px solid $color-dark;
+      border-radius: 50%;
+      margin-right: 12px;
+      position: relative;
+      cursor: pointer;
+
+      &:checked {
+        background-color: $color-green;
+        border-color: $color-green;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 10px;
+          height: 10px;
+          background-color: $color-dark;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &__tab-text {
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__label {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 18px 30px;
+    border: 1px solid $color-dark;
+    border-radius: 14px;
+    font-size: 18px;
+    background: transparent;
+    outline: none;
+
+    &::placeholder {
+      color: #898989;
+    }
+
+    &:focus {
+      border-color: $color-green;
+    }
+  }
+
+
+  &__textarea {
+    width: 100%;
+    min-height: 190px;
+    padding: 18px 30px;
+    border: 1px solid $color-dark;
+    border-radius: 14px;
+    font-size: 18px;
+    font-family: inherit;
+    background: transparent;
+    outline: none;
+    resize: vertical;
+
+    &::placeholder {
+      color: #898989;
+    }
+
+    &:focus {
+      border-color: $color-green;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    padding: 20px;
+    margin-top: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 14px;
+    background-color: $color-dark;
+    color: $color-white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: lighten($color-dark, 10%);
+    }
+  }
+
+  &__image{
+    position: absolute; /* Контейнер-рамка */
+    overflow: visible;  /* Важно: позволяет контенту выходить за края */
+
+    padding-top: 62px;
+    right: -190px;
+    width: 692px;
+    height: 648px;
+  }
+}

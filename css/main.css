@@ -979,4 +979,127 @@ p {
   border-color: #B9FF66;
 }
 
+.contact__wrapper {
+  display: flex;
+}
+
+.contact-form {
+  background-color: #F3F3F3;
+  border-radius: 45px;
+  padding: 60px;
+  padding-left: 100px;
+  width: 100%;
+  max-width: 700px;
+}
+.contact-form__tabs {
+  display: flex;
+  gap: 35px;
+  margin-bottom: 40px;
+}
+.contact-form__tab {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.contact-form__tab input[type=radio] {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #191A23;
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  cursor: pointer;
+}
+.contact-form__tab input[type=radio]:checked {
+  background-color: #B9FF66;
+  border-color: #B9FF66;
+}
+.contact-form__tab input[type=radio]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #191A23;
+  border-radius: 50%;
+}
+.contact-form__tab-text {
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.contact-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact-form__label {
+  font-size: 16px;
+  font-weight: 400;
+}
+.contact-form__input {
+  width: 100%;
+  padding: 18px 30px;
+  border: 1px solid #191A23;
+  border-radius: 14px;
+  font-size: 18px;
+  background: transparent;
+  outline: none;
+}
+.contact-form__input::placeholder {
+  color: #898989;
+}
+.contact-form__input:focus {
+  border-color: #B9FF66;
+}
+.contact-form__textarea {
+  width: 100%;
+  min-height: 190px;
+  padding: 18px 30px;
+  border: 1px solid #191A23;
+  border-radius: 14px;
+  font-size: 18px;
+  font-family: inherit;
+  background: transparent;
+  outline: none;
+  resize: vertical;
+}
+.contact-form__textarea::placeholder {
+  color: #898989;
+}
+.contact-form__textarea:focus {
+  border-color: #B9FF66;
+}
+.contact-form__submit {
+  width: 100%;
+  padding: 20px;
+  margin-top: 15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 14px;
+  background-color: #191A23;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact-form__submit:hover {
+  background-color: #2e3041;
+}
+.contact-form__image {
+  position: absolute; /* Контейнер-рамка */
+  overflow: visible; /* Важно: позволяет контенту выходить за края */
+  padding-top: 62px;
+  right: -190px;
+  width: 692px;
+  height: 648px;
+}
+
 /*# sourceMappingURL=main.css.map */
