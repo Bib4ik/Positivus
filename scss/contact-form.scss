@@ -1,5 +1,7 @@
 .contact__wrapper{
   display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
 .contact-form{
@@ -135,7 +137,7 @@
     overflow: visible;  /* Важно: позволяет контенту выходить за края */
 
     padding-top: 62px;
-    right: -190px;
+    right: -285px;
     width: 692px;
     height: 648px;
   }

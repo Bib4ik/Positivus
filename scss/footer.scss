@@ -1,0 +1,125 @@
+$color-dark: #191A23;
+$color-green: #B9FF66;
+$color-white: #FFFFFF;
+
+.footer {
+  background-color: $color-dark;
+  color: $color-white;
+  $font-family: "Space Grotesk";
+  padding: 60px 50px 30px;
+  margin: 100px 0 100px;
+  border-radius: 45px 45px 0 0; // Закругление сверху как на скрине
+
+  &__container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 66px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 40px;
+    a {
+      font-size: 18px;
+      color: $color-white;
+      text-decoration: underline;
+      &:hover { color: $color-green; }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    $font-family: "Space Grotesk";
+    margin-bottom: 50px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  &__label {
+    background-color: $color-green;
+    color: #000;
+    font-size: 20px;
+    padding: 2px 8px;
+    border-radius: 7px;
+    width: fit-content;
+    font-weight: 500;
+  }
+
+  &__subscribe {
+    background-color: #292A32;
+    padding: 58px 40px;
+    border-radius: 14px;
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    max-width: 630px;
+  }
+
+  &__input {
+    background: transparent;
+    border: 1px solid $color-white;
+    border-radius: 14px;
+    padding: 18px 35px;
+    color: $color-white;
+    flex-grow: 1;
+    outline: none;
+    font-size: 18px;
+    $font-family: "Space Grotesk";
+
+    &::placeholder { color: $color-white; }
+  }
+
+  &__submit {
+    background-color: $color-green;
+    color: #000;
+    border: none;
+    border-radius: 14px;
+    padding: 18px 35px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 20px;
+    $font-family: "Space Grotesk";
+
+    &:hover { background-color: darken($color-green, 10%); }
+  }
+
+  &__bottom {
+    border-top: 1px solid white;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    display: flex;
+    gap: 40px;
+    font-size: 18px;
+    a { color: $color-white; }
+  }
+}

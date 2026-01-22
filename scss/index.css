@@ -981,6 +981,8 @@ p {
 
 .contact__wrapper {
   display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
 .contact-form {
@@ -1097,9 +1099,121 @@ p {
   position: absolute; /* Контейнер-рамка */
   overflow: visible; /* Важно: позволяет контенту выходить за края */
   padding-top: 62px;
-  right: -190px;
+  right: -285px;
   width: 692px;
   height: 648px;
+}
+
+.footer {
+  background-color: #191A23;
+  color: #FFFFFF;
+  padding: 60px 50px 30px;
+  margin: 100px 0 100px;
+  border-radius: 45px 45px 0 0;
+}
+.footer__container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 66px;
+}
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.footer__nav {
+  display: flex;
+  gap: 40px;
+}
+.footer__nav a {
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.footer__nav a:hover {
+  color: #B9FF66;
+}
+.footer__socials {
+  display: flex;
+  gap: 20px;
+}
+.footer__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 300px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+.footer__label {
+  background-color: #B9FF66;
+  color: #000;
+  font-size: 20px;
+  padding: 2px 8px;
+  border-radius: 7px;
+  width: fit-content;
+  font-weight: 500;
+}
+.footer__subscribe {
+  background-color: #292A32;
+  padding: 58px 40px;
+  border-radius: 14px;
+  display: flex;
+  gap: 20px;
+  flex-grow: 1;
+  max-width: 630px;
+}
+.footer__input {
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 14px;
+  padding: 18px 35px;
+  color: #FFFFFF;
+  flex-grow: 1;
+  outline: none;
+  font-size: 18px;
+}
+.footer__input::placeholder {
+  color: #FFFFFF;
+}
+.footer__submit {
+  background-color: #B9FF66;
+  color: #000;
+  border: none;
+  border-radius: 14px;
+  padding: 18px 35px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 20px;
+}
+.footer__submit:hover {
+  background-color: #a2ff33;
+}
+.footer__bottom {
+  border-top: 1px solid white;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+}
+.footer__bottom a {
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=index.css.map */
