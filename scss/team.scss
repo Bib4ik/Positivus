@@ -6,7 +6,7 @@
     align-items: start;
 
     @media all and (max-width: $media-m){
-
+      gap: 2rem;
     }
 
     @media all and (max-width: $media-s){
@@ -33,8 +33,14 @@
       }
     }
 
+    @media all and (max-width: $media-m){
+      width: 485px;
+      margin-left: 28px;
+    }
+
     @media all and (max-width: $media-s){
       width: 100%;
+      margin-left: 0;
     }
   }
 
@@ -56,8 +62,14 @@
       }
     }
 
+    @media all and (max-width: $media-m){
+      width: 485px;
+      margin-left: 28px;
+    }
+
     @media all and (max-width: $media-s){
       width: 100%;
+      margin-left: 0;
     }
   }
 

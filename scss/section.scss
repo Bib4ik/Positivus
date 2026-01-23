@@ -44,7 +44,12 @@
       }
 
       p{
+        @media all and (max-width: $media-m) {
+          font-size: 24px;
+        }
+
         @media all and (max-width: $media-s) {
+          font-size: 16px;
           margin-bottom: 3rem;
         }
       }
