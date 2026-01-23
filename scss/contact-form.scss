@@ -153,6 +153,10 @@
     width: 692px;
     height: 648px;
 
+    @media all and (max-width: $media-m){
+      right: -400px;
+    }
+
     @media all and (max-width: $media-s){
       display: none;
     }

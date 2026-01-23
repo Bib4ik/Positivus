@@ -258,6 +258,7 @@ p {
 @media all and (max-width: 1300px) {
   .menu {
     display: block;
+    margin-right: 4rem;
   }
 }
 @media all and (max-width: 500px) {
@@ -414,11 +415,18 @@ p {
   .section_first .section__container {
     margin: 0 auto 6rem;
     max-width: 100rem;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media all and (max-width: 500px) {
   .section_first .section__container {
     row-gap: 1rem;
+  }
+}
+@media all and (max-width: 1300px) {
+  .section_first .section__container h1 {
+    font-size: 4rem;
   }
 }
 @media all and (max-width: 500px) {
@@ -808,7 +816,6 @@ p {
   border: 1px solid #191A23;
   box-shadow: 0 5px 0 0 #191A23;
   padding: 40px;
-  width: 387px;
   height: 331px;
   width: calc((100% - 8rem) / 3);
 }
@@ -830,8 +837,7 @@ p {
   border: 1px solid #191A23;
   box-shadow: 0 5px 0 0 #191A23;
   padding: 40px;
-  width: 387px;
-  height: 354px;
+  height: 331px;
   width: calc((100% - 8rem) / 3);
 }
 @media (hover: hover) {
@@ -923,6 +929,12 @@ p {
   flex-direction: row-reverse;
   margin-top: 40px;
 }
+@media all and (max-width: 1300px) {
+  .team_btn-end {
+    justify-content: center;
+    align-items: center;
+  }
+}
 @media all and (max-width: 500px) {
   .team_btn-end {
     justify-content: center;
@@ -942,6 +954,17 @@ p {
   padding-left: 310px;
   background-color: #191A23;
   color: #fff;
+}
+@media all and (max-width: 1300px) {
+  .swiper-slide__content {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    height: auto;
+    padding: 40px 30px;
+    margin: 0 auto;
+  }
 }
 @media all and (max-width: 500px) {
   .swiper-slide__content {
@@ -1011,7 +1034,7 @@ p {
 }
 @media all and (max-width: 500px) {
   .swiper-slide__subtitle {
-    margin-left: 0;
+    margin-left: 0px;
     font-size: 16px;
     margin-top: 5px;
   }
@@ -1037,7 +1060,7 @@ p {
 }
 @media all and (max-width: 500px) {
   .swiper-wrapper {
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 .swiper-slide {
@@ -1050,7 +1073,6 @@ p {
   .swiper-slide {
     display: flex;
     justify-content: center;
-    padding: 0 20px;
   }
 }
 .swiper_container-arrow {
@@ -1268,6 +1290,11 @@ p {
   width: 692px;
   height: 648px;
 }
+@media all and (max-width: 1300px) {
+  .contact-form__image {
+    right: -400px;
+  }
+}
 @media all and (max-width: 500px) {
   .contact-form__image {
     display: none;
@@ -1277,9 +1304,15 @@ p {
 .footer {
   background-color: #191A23;
   color: #FFFFFF;
-  padding: 60px 50px 30px;
-  margin: 100px 0 100px;
+  padding: 60px 50px;
+  margin: 100px 0 0;
   border-radius: 45px 45px 0 0;
+}
+@media all and (max-width: 1300px) {
+  .footer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 @media all and (max-width: 500px) {
   .footer {
@@ -1328,6 +1361,11 @@ p {
 .footer__nav {
   display: flex;
   gap: 40px;
+}
+@media all and (max-width: 1300px) {
+  .footer__nav {
+    gap: 20px;
+  }
 }
 @media all and (max-width: 500px) {
   .footer__nav {
@@ -1414,6 +1452,13 @@ p {
   flex-grow: 1;
   max-width: 630px;
 }
+@media all and (max-width: 1300px) {
+  .footer__subscribe {
+    max-width: 500px;
+    padding: 48px 30px;
+    margin-top: 20px;
+  }
+}
 @media all and (max-width: 500px) {
   .footer__subscribe {
     flex-direction: column;
@@ -1432,6 +1477,13 @@ p {
   flex-grow: 1;
   outline: none;
   font-size: 18px;
+}
+@media all and (max-width: 1300px) {
+  .footer__input {
+    padding: 15px 20px;
+    font-size: 16px;
+    width: 100%;
+  }
 }
 @media all and (max-width: 500px) {
   .footer__input {
@@ -1453,6 +1505,13 @@ p {
   cursor: pointer;
   white-space: nowrap;
   font-size: 20px;
+}
+@media all and (max-width: 1300px) {
+  .footer__submit {
+    padding: 15px 20px;
+    font-size: 16px;
+    width: 100%;
+  }
 }
 @media all and (max-width: 500px) {
   .footer__submit {

@@ -25,6 +25,8 @@
       @media all and (max-width: $media-m) {
         margin: 0 auto 6rem;
         max-width: 100rem;
+        justify-content: center;
+        align-items: center;
       }
 
       @media all and (max-width: $media-s) {
@@ -32,6 +34,10 @@
       }
 
       h1{
+        @media all and (max-width: $media-m) {
+          font-size: 4rem;
+        }
+
         @media all and (max-width: $media-s) {
           font-size: 3.5rem;
         }

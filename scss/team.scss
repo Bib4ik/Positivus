@@ -5,6 +5,10 @@
     gap: 4rem;
     align-items: start;
 
+    @media all and (max-width: $media-m){
+
+    }
+
     @media all and (max-width: $media-s){
       flex-direction: column;
     }
@@ -15,10 +19,10 @@
     border: 1px solid $color-dark;
     box-shadow: 0 5px 0 0 $color-dark;
     padding: 40px;
-    width: 387px;
     height: 331px;
     width: calc((100% - 8rem) / 3); // ✅ 3 карточки в ряд с учётом gap
     // Альтернатива: flex: 0 0 calc((100% - 8rem) / 3);
+
 
     @media(hover: hover){
       transition: all 0.3s ease-out;
@@ -39,8 +43,7 @@
     border: 1px solid $color-dark;
     box-shadow: 0 5px 0 0 $color-dark;
     padding: 40px;
-    width: 387px;
-    height: 354px;
+    height: 331px;
     width: calc((100% - 8rem) / 3); // ✅ 3 карточки в ряд с учётом gap
     // Альтернатива: flex: 0 0 calc((100% - 8rem) / 3);
 
@@ -100,6 +103,10 @@
     font-size: 18px;
     font-weight: normal;
     line-height: 1.2;
+
+    //@media all and (max-width:$media-m){
+    //  white-space: wrap;
+    //}
   }
 
   &__btn{
@@ -144,6 +151,11 @@
     display: flex;
     flex-direction: row-reverse;
     margin-top: 40px;
+
+    @media all and (max-width: $media-m){
+      justify-content: center;
+      align-items: center;
+    }
 
     @media all and (max-width: $media-s){
       justify-content: center;
