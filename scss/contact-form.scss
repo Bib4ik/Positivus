@@ -2,6 +2,12 @@
   display: flex;
   position: relative;
   overflow: hidden;
+
+  @media all and (max-width: $media-s){
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+  }
 }
 
 .contact-form{
@@ -11,6 +17,12 @@
   padding-left: 100px;
   width: 100%;
   max-width: 700px;
+
+  @media all and (max-width: $media-s){
+    width: 100%; // ✅ изменил с 450px на 100%
+    max-width: 500px; // ✅ добавил max-width
+    padding: 40px 30px; // ✅ уменьшил padding
+  }
 
   &__tabs{
     display: flex;
@@ -140,5 +152,9 @@
     right: -285px;
     width: 692px;
     height: 648px;
+
+    @media all and (max-width: $media-s){
+      display: none;
+    }
   }
 }

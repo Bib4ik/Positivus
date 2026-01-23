@@ -13,6 +13,14 @@
     padding-left: 310px;
     background-color: $color-dark;
     color: $color-white;
+
+    @media all and (max-width: $media-s){
+      width: 100%; // ✅ на всю ширину экрана
+      max-width: 500px; // ✅ максимальная ширина
+      height: auto; // ✅ высота по контенту
+      padding: 40px 30px; // ✅ уменьшенные отступы
+      margin: 0 auto; // ✅ центрирование
+    }
   }
 
   &-slide__text{
@@ -25,6 +33,15 @@
     height: 235px;
     position: relative;
 
+    @media all and (max-width: $media-s){
+      width: 100%; // ✅ на всю ширину контейнера
+      height: auto; // ✅ высота по контенту
+      min-height: 200px; // ✅ минимальная высота
+      padding: 30px; // ✅ уменьшенные отступы
+      font-size: 16px; // ✅ уменьшенный шрифт
+      border-radius: 2rem; // ✅ уменьшенное скругление
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -36,6 +53,13 @@
       border-right: 1px solid #B9FF66; // Обводка только для двух сторон
       border-bottom: 1px solid #B9FF66;
       transform: rotate(45deg);      // Поворачиваем, чтобы получился ромб
+
+      @media all and (max-width: $media-s){
+        left: 30px; // ✅ сдвинул влево
+        width: 20px; // ✅ уменьшил размер
+        height: 20px;
+        bottom: -10px;
+      }
     }
   }
 
@@ -44,18 +68,35 @@
     margin-left: 60px;
     font-size: 20px;
     color: $color-green;
+
+    @media all and (max-width: $media-s){
+      margin-top: 30px; // ✅ уменьшил отступ
+      margin-left: 0; // ✅ убрал левый отступ
+      font-size: 18px; // ✅ уменьшил шрифт
+    }
   }
 
   &-slide__subtitle{
     font-size: 18px;
     margin-left: 60px;
+
+    @media all and (max-width: $media-s){
+      margin-left: 0; // ✅ убрал левый отступ
+      font-size: 16px; // ✅ уменьшил шрифт
+      margin-top: 5px; // ✅ добавил отступ сверху
+    }
   }
 
   &__slider{
     width: 100%;       // Слайдер должен занимать всю доступную ширину
     height: auto;      // Высота подстроится под контент
-    //overflow: hidden;  // Скрывает слайды, которые не активны в данный момент
+    overflow: hidden; // Скрывает слайды, которые не активны в данный момент
     position: relative; // Важно для позиционирования стрелок
+
+    @media all and (max-width: $media-s){
+      overflow: hidden; // ✅ скрывает всё что выходит за края
+      padding: 0; // ✅ отступы по бокам
+    }
   }
 
   &-wrapper {
@@ -64,6 +105,10 @@
     height: 100%;
     transition-property: transform; // Обеспечивает плавность перехода
     box-sizing: content-box;
+
+    @media all and (max-width: $media-s){
+      justify-content: start;
+    }
   }
 
   &-slide{
@@ -71,6 +116,12 @@
     width: 100%;    // Один слайд занимает всю ширину контейнера
     height: 100%;
     position: relative;
+
+    @media all and (max-width: $media-s){
+      display: flex;
+      justify-content: center; // ✅ центрирование содержимого
+      padding: 0 20px;
+    }
   }
 
   &_container-arrow {
@@ -78,6 +129,10 @@
     display: flex;
     justify-content: center; // ✅ центрируем блок управления
     z-index: 10;
+
+    @media all and (max-width: $media-s){
+      margin-top: 30px; // ✅ отступ сверху
+    }
   }
 
   &-controls {
@@ -86,6 +141,10 @@
     justify-content: center;
     gap: 30px;
     width: auto; // ✅ убираем width: 100%
+
+    @media all and (max-width: $media-s){
+      gap: 20px; // ✅ уменьшил расстояние
+    }
   }
 
   &-button-next::after,
@@ -105,6 +164,11 @@
     background: transparent;
     border: none;
     padding: 0;
+
+    @media all and (max-width: $media-s){
+      width: 24px !important; // ✅ уменьшил размер
+      height: 24px !important;
+    }
 
     img {
       width: 100%; // ✅ ВАЖНО: изображение заполняет кнопку
@@ -129,6 +193,11 @@
       border-radius: 0;
       transform: rotate(45deg);
       transition: all 0.3s ease;
+
+      @media all and (max-width: $media-s){
+        width: 12px; // ✅ уменьшил размер
+        height: 12px;
+      }
 
       &-active {
         background: #B9FF66;

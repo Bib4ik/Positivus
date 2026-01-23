@@ -8,5 +8,10 @@
   @media all and (max-width:$media-m){
     display: block;
   }
+
+  @media all and (max-width:$media-s){
+    display: block;
+    margin-right: 2rem;
+  }
 }
 

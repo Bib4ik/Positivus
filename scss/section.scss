@@ -31,11 +31,24 @@
         row-gap: 1rem;
       }
 
+      h1{
+        @media all and (max-width: $media-s) {
+          font-size: 3.5rem;
+        }
+      }
+
       p{
         @media all and (max-width: $media-s) {
           margin-bottom: 3rem;
         }
       }
+
+    }
+  }
+
+  .partners{
+    @media all and (max-width: $media-s) {
+      gap: 1rem;
     }
   }
 
@@ -129,6 +142,7 @@
       flex-direction: column;
       row-gap: 3rem;
       margin: 0 auto 4rem;
+      padding-top: 5rem;
 
       justify-content: center;
       text-align: center;
@@ -145,6 +159,7 @@
       flex-direction: column;
       row-gap: 3rem;
       margin: 0 auto 4rem;
+      padding-top: 5rem;
 
       justify-content: center;
       text-align: center;
