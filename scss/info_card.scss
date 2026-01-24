@@ -119,7 +119,7 @@
   &__btn-white{
     margin-left: auto;
     border: none;
-    background-color: $color-white;
+    background-color: transparent;
 
     @media all and (max-width: $media-s){
       margin-top: 0;

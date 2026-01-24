@@ -40,36 +40,43 @@ document.addEventListener('DOMContentLoaded', function() {
             if (btnImg) btnImg.src = '/assets/icons/plus-icon.png';
         }
 
-        // Добавляем обработчик клика
+        // Функция переключения состояния карточки
+        function toggleCard() {
+            const btnImg = btn.querySelector('img');
+            const isHidden = content.classList.contains('none');
+
+            if (isHidden) {
+                // Открываем
+                content.classList.remove('none');
+                line.classList.remove('none');
+                if (btnImg) btnImg.src = '/assets/icons/minus-icon.png';
+
+                item.classList.remove('info_item_bg_white');
+                item.classList.add('info_item_bg_green');
+
+                btn.className = 'info__btn';
+            } else {
+                // Закрываем
+                content.classList.add('none');
+                line.classList.add('none');
+                if (btnImg) btnImg.src = '/assets/icons/plus-icon.png';
+
+                item.classList.remove('info_item_bg_green');
+                item.classList.add('info_item_bg_white');
+
+                btn.className = 'info__btn-white';
+            }
+        }
+
+        // Обработчик клика на всю карточку
+        item.addEventListener('click', function(e) {
+            toggleCard();
+        });
+
+        // Обработчик клика на кнопку (для предотвращения двойного срабатывания)
         if (btn) {
             btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-
-                const btnImg = btn.querySelector('img');
-                const isHidden = content.classList.contains('none');
-
-                if (isHidden) {
-                    // Открываем
-                    content.classList.remove('none');
-                    line.classList.remove('none');
-                    if (btnImg) btnImg.src = '/assets/icons/minus-icon.png';
-
-                    item.classList.remove('info_item_bg_white');
-                    item.classList.add('info_item_bg_green');
-
-                    btn.className = 'info__btn';
-                } else {
-                    // Закрываем
-                    content.classList.add('none');
-                    line.classList.add('none');
-                    if (btnImg) btnImg.src = '/assets/icons/plus-icon.png';
-
-                    item.classList.remove('info_item_bg_green');
-                    item.classList.add('info_item_bg_white');
-
-                    btn.className = 'info__btn-white';
-                }
+                e.stopPropagation(); // предотвращаем всплытие события
             });
         }
     });

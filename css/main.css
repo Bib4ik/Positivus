@@ -775,7 +775,7 @@ p {
 .info__btn-white {
   margin-left: auto;
   border: none;
-  background-color: #fff;
+  background-color: transparent;
 }
 @media all and (max-width: 500px) {
   .info__btn-white {
