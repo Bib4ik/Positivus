@@ -23,8 +23,18 @@
         <button class="btn btn_header btn_outline">Request a quote</button>
         <div class="menu">
             <img class="menu__icon" src="menu.png" alt="">
+            <nav class="menu__popup">
+                <button class="menu__close">×</button>
+                <a href="#about-us" class="menu__link">About us</a>
+                <a href="#services" class="menu__link">Services</a>
+                <a href="#use-cases" class="menu__link">Use Cases</a>
+                <a href="#pricing" class="menu__link">Pricing</a>
+                <a href="#blog" class="menu__link">Blog</a>
+                <button class="btn btn_outline">Request a quote</button>
+            </nav>
         </div>
     </header>
+
     <section class="section section_first">
         <div class="section__container">
             <h1>Navigating the digital landscape for success</h1>
@@ -158,7 +168,7 @@
         </div>
     </section>
 
-    <section class="section section_third">
+    <section id="use-cases" class="section section_third">
         <div class="section__header-info">
             <h2 class="heading heading_bg_green"><span>Case Studies</span></h2>
             <p>Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies</p>
@@ -526,7 +536,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer id="services" class="footer">
         <div class="footer__container">
             <div class="footer__top">
                 <div class="footer__logo">
@@ -534,11 +544,11 @@
                     <!--                    <span>Positivus</span>-->
                 </div>
                 <nav class="footer__nav">
-                    <a href="#">About us</a>
-                    <a href="#">Services</a>
-                    <a href="#">Use Cases</a>
-                    <a href="#">Pricing</a>
-                    <a href="#">Blog</a>
+                    <a href="#about-us">About us</a>
+                    <a href="#services">Services</a>
+                    <a href="#use-cases">Use Cases</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#blog">Blog</a>
                 </nav>
                 <div class="footer__socials">
                     <a href="#"><img src="/assets/icons/linkedin.svg" alt="LinkedIn"></a>

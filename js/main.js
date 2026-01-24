@@ -1,3 +1,23 @@
+const menuIcon = document.querySelector('.menu__icon');
+const menuPopup = document.querySelector('.menu__popup');
+const menuClose = document.querySelector('.menu__close');
+
+
+menuIcon.addEventListener('click', () => {
+    menuPopup.classList.toggle('active');
+});
+
+menuClose.addEventListener('click', () => {
+    menuPopup.classList.remove('active');
+});
+
+// Закрытие при клике вне меню
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.menu')) {
+        menuPopup.classList.remove('active');
+    }
+});
+
 const swiperTop = new Swiper('.swiper__slider', {
     // Optional parameters
     effect: 'slide',
