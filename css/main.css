@@ -26,6 +26,10 @@ body {
   width: 100%;
 }
 
+.none {
+  display: none;
+}
+
 .page {
   display: flex;
   justify-content: center;
@@ -721,12 +725,16 @@ p {
   box-shadow: 0 5px 0 0 #191A23;
   width: 100%;
   padding: 5rem;
+  transition: background-color 0.3s ease;
 }
 @media all and (max-width: 500px) {
   .info__item {
     gap: 1.5rem;
     padding: 3rem;
   }
+}
+.info__item.closed {
+  background-color: #fff;
 }
 .info_item_bg_green {
   background-color: #B9FF66;
@@ -759,6 +767,7 @@ p {
 .info__btn {
   margin-left: auto;
   border: none;
+  border-radius: 50%;
   background-color: #B9FF66;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -1054,7 +1063,6 @@ p {
 @media all and (max-width: 500px) {
   .swiper-slide__title {
     margin-top: 30px;
-    margin-right: 0;
     margin-left: 0;
     font-size: 18px;
   }
